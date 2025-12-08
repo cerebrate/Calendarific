@@ -9,8 +9,8 @@ jobs:
     name: Prepare release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: "Set version numbmer"
+      - uses: actions/checkout@v4
+      - name: "Set version number"
         run: |
           sed -i '/VERSION = /c\VERSION = "${{ github.ref }}"' custom_components/calendarific/const.py
           sed -i 's|refs/heads/||' custom_components/calendarific/const.py
@@ -25,7 +25,7 @@ jobs:
           cd /home/runner/work/Calendarific/Calendarific/custom_components/calendarific
           zip calendarific.zip -r ./
       - name: Upload zip to release
-        uses: svenstaro/upload-release-action@v1-release
+        uses: svenstaro/upload-release-action@2.7.0
 
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
