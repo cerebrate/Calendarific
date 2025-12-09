@@ -2,7 +2,7 @@
 # Base component constants
 DOMAIN = "calendarific"
 VERSION = "1.0.2"
-ISSUE_URL = "https://github.com/pinkywafer/Calendarific/issues"
+ISSUE_URL = "https://github.com/cerebrate/Calendarific/issues"
 ATTRIBUTION = "Data provided by calendarific.com"
 
 ATTR_DATE = "date"
